@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+venv/
+.venv/
+env/
+
+# Database
+data/
+*.db
+*.sqlite3
+
+# Reports (generated files)
+reports/
+
+# SQL dumps with user data
+aws_audit.sql
+
+# SMTP config (contains credentials)
+data/smtp_config.json
+
+# Environment
+.env
+*.env
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

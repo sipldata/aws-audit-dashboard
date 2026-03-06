@@ -1,0 +1,76 @@
+  {
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Sid": "CostExplorer",
+        "Effect": "Allow",
+        "Action": [
+          "ce:GetCostAndUsage",
+          "ce:GetCostForecast"
+        ],
+        "Resource": "*"
+      },
+      {
+        "Sid": "EC2ReadOnly",
+        "Effect": "Allow",
+        "Action": [
+          "ec2:DescribeInstances",
+          "ec2:DescribeVolumes",
+          "ec2:DescribeSnapshots",
+          "ec2:DescribeAddresses",
+          "ec2:DescribeNatGateways",
+          "ec2:DescribeVpcs",
+          "ec2:DescribeRouteTables"
+        ],
+        "Resource": "*"
+      },
+      {
+        "Sid": "OtherServicesReadOnly",
+        "Effect": "Allow",
+        "Action": [
+          "rds:DescribeDBInstances",
+          "lambda:ListFunctions",
+          "elasticloadbalancing:DescribeLoadBalancers",
+          "elasticloadbalancing:DescribeTargetGroups",
+          "elasticloadbalancing:DescribeTargetHealth",
+          "ecs:ListClusters",
+          "elasticache:DescribeCacheClusters",
+          "sns:ListTopics",
+          "sqs:ListQueues",
+          "cloudfront:ListDistributions",
+          "s3:ListAllMyBuckets",
+          "s3:GetBucketLocation",
+          "s3:GetPublicAccessBlock",
+          "s3:GetBucketEncryption"
+        ],
+        "Resource": "*"
+      },
+      {
+        "Sid": "IAMAndOrg",
+        "Effect": "Allow",
+        "Action": [
+          "sts:GetCallerIdentity",
+          "iam:ListAccountAliases",
+          "iam:ListMFADevices",
+          "iam:GetAccountSummary",
+          "iam:ListUsers",
+          "iam:GetLoginProfile",
+          "iam:ListAccessKeys",
+          "organizations:DescribeOrganization"
+        ],
+        "Resource": "*"
+      },
+      {
+        "Sid": "QuotasAndMonitoring",
+        "Effect": "Allow",
+        "Action": [
+          "servicequotas:GetServiceQuota",
+          "servicequotas:GetAWSDefaultServiceQuota",
+          "cloudwatch:DescribeAlarms",
+          "cloudwatch:GetMetricStatistics"
+        ],
+        "Resource": "*"
+      }
+    ]
+  }
+
