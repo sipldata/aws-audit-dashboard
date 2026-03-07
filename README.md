@@ -2,6 +2,14 @@
 
 A Streamlit-based web application for auditing AWS accounts — covering billing, resource inventory, security posture, and cost optimization with a full-featured authentication system.
 
+## Screenshots
+
+### Login Page
+![Login Page](screenshots/login.png)
+
+### Dashboard
+![Dashboard](screenshots/dashboard.png)
+
 ## Features Overview
 
 ### AWS Auditing
